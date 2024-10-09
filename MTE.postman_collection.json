@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "26b1b9a4-7ad1-449d-8c77-173b685368f7",
+		"name": "MTE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37326786"
+	},
+	"item": [
+		{
+			"name": "/user",
+			"item": [
+				{
+					"name": "/register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YmFkYmFjYzNlNGNmZTBkYjJjNTM5MyIsImVtYWlsIjoiam9obkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyMzYyMDcwOH0.dto9aHs8NJYJuP2YQtbRs97ui8kzjrV-Hhwg0V29BXY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user1@mail.com\",\r\n    \"password\":\"user12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDUzYzNiNjNiNTI2MmZmYzlhYmVjYSIsImVtYWlsIjoidXNlcjFAbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzI4Mzk2MzU0fQ.TfF1bo6vn1ZlsHy0w1A1YHFCyl5aI1N4eCSJXgyEjQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user1@mail.com\",\r\n    \"password\":\"user12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/workout",
+			"item": [
+				{
+					"name": "/addWorkout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDUzYzNiNjNiNTI2MmZmYzlhYmVjYSIsImVtYWlsIjoidXNlcjFAbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzI4Mzk2MzU0fQ.TfF1bo6vn1ZlsHy0w1A1YHFCyl5aI1N4eCSJXgyEjQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Side Plank\",\r\n    \"duration\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/workouts/addWorkout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"workouts",
+								"addWorkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/getMyWorkouts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDUzYzNiNjNiNTI2MmZmYzlhYmVjYSIsImVtYWlsIjoidXNlcjFAbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzI4Mzk2MzU0fQ.TfF1bo6vn1ZlsHy0w1A1YHFCyl5aI1N4eCSJXgyEjQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/workouts/getMyWorkouts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"workouts",
+								"getMyWorkouts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/updateWorkout",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/workouts/updateWorkout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"workouts",
+								"updateWorkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDUzYzNiNjNiNTI2MmZmYzlhYmVjYSIsImVtYWlsIjoidXNlcjFAbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzI4NDY0NjgwfQ.tUigf1T3zB56dvfWyXK-V1QYtPeQPwUX2hALIVk3BCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/workouts/deleteWorkout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"workouts",
+								"deleteWorkout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
